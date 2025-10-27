@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InitialDmotos - Servicio de Grúa Premium para Motocicletas - Concepción, Chile</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="motorcycle-loader">
+                <i class="fas fa-motorcycle"></i>
+                <div class="loading-text">InitalDmotos</div>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav" id="mainNav">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-motorcycle brand-icon"></i>
+                <span class="brand-text">InitialDmotos</span>
+                <span class="brand-subtitle">PREMIUM</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio" data-text="Inicio">Inicio</a></li>
+                <li><a href="#servicios" data-text="Servicios">Servicios</a></li>
+                <li><a href="#rescate" data-text="Rescate">Rescate</a></li>
+                <li><a href="#testimonios" data-text="Testimonios">Testimonios</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-bg">
+            <div class="hero-overlay"></div>
+            <div class="floating-particles"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Servicio Premium 24/7</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">Tu Moto se Quedó</span>
+                    <span class="title-line highlight">EN PANA?</span>
+                    <span class="title-line">¡Te Rescatamos!</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Servicio de grúa especializada para motocicletas en Concepción y Gran Concepción. 
+                    Rescate inmediato con GPS y los mejores profesionales de la región.
+                </p>
+                
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-emergency" onclick="openEmergencyRescue()">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <span>¡RESCATE INMEDIATO!</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToServices()">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Ver Servicios</span>
+                    </button>
+                </div>
+
+                <div class="emergency-info">
+                    <div class="emergency-card">
+                        <div class="emergency-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="emergency-details">
+                            <span class="emergency-label">Línea Directa 24/7 - Concepción</span>
+                            <span class="emergency-number">+56 9 3197 0961</span>
+                        </div>
+                        <div class="emergency-status">
+                            <div class="status-dot"></div>
+                            <span>Online</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item" data-count="2000">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">Rescates Exitosos</div>
+                    </div>
+                    <div class="stat-item" data-count="15">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">Min Promedio Respuesta</div>
+                    </div>
+                    <div class="stat-item" data-count="99">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">% Satisfacción Cliente</div>
+                    </div>
+                    <div class="stat-item" data-count="24">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">Horas Disponibles</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Nuestros Servicios</span>
+                <h2 class="section-title">Soluciones Premium para tu Motocicleta</h2>
+                <p class="section-subtitle">Tecnología avanzada y personal especializado para cada situación</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card" data-service="grua">
+                    <div class="service-icon">
+                        <i class="fas fa-truck"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Grúa Especializada</h3>
+                    <p>Vehículos de última generación equipados con sistemas hidráulicos y plataformas especiales para motocicletas de cualquier cilindrada.</p>
+                    <div class="service-features">
+                        <span><i class="fas fa-check"></i> Plataforma hidráulica</span>
+                        <span><i class="fas fa-check"></i> Sujeción profesional</span>
+                        <span><i class="fas fa-check"></i> Para todas las motos</span>
+                    </div>
+                    <div class="service-hover">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <div class="service-card" data-service="24h">
+                    <div class="service-icon">
+                        <i class="fas fa-clock"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Servicio 24/7</h3>
+                    <p>Disponibilidad total los 365 días del año. Nuestro centro de operaciones nunca duerme para estar cuando más nos necesites.</p>
+                    <div class="service-features">
+                        <span><i class="fas fa-check"></i> Sin días festivos</span>
+                        <span><i class="fas fa-check"></i> Respuesta inmediata</span>
+                        <span><i class="fas fa-check"></i> Todo clima</span>
+                    </div>
+                    <div class="service-hover">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <div class="service-card" data-service="gps">
+                    <div class="service-icon">
+                        <i class="fas fa-satellite-dish"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Localización GPS</h3>
+                    <p>Sistema de geolocalización en tiempo real. Te encontramos exactamente donde estés y calculamos rutas óptimas para llegar más rápido.</p>
+                    <div class="service-features">
+                        <span><i class="fas fa-check"></i> GPS en tiempo real</span>
+                        <span><i class="fas fa-check"></i> Rutas optimizadas</span>
+                        <span><i class="fas fa-check"></i> Tracking de unidad</span>
+                    </div>
+                    <div class="service-hover">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <div class="service-card" data-service="seguro">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3>Totalmente Asegurado</h3>
+                    <p>Cobertura completa de seguro durante todo el proceso. Tu motocicleta está protegida desde el momento que la recogemos.</p>
+                    <div class="service-features">
+                        <span><i class="fas fa-check"></i> Seguro de responsabilidad</span>
+                        <span><i class="fas fa-check"></i> Cobertura de daños</span>
+                        <span><i class="fas fa-check"></i> Garantía total</span>
+                    </div>
+                    <div class="service-hover">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rescue Section -->
+    <section id="rescate" class="rescue-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Sistema de Rescate</span>
+                <h2 class="section-title">Solicita tu Rescate Inmediato</h2>
+                <p class="section-subtitle">Contáctanos directamente por WhatsApp para rescate urgente</p>
+            </div>
+
+            <div class="rescue-container">
+                <div class="rescue-whatsapp-card">
+                    <div class="whatsapp-icon-large">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>Rescate Inmediato por WhatsApp</h3>
+                    <p>Conéctate directamente con nuestro equipo de rescate. Respuesta inmediata las 24 horas.</p>
+                    <button class="btn btn-primary btn-whatsapp-large" onclick="openEmergencyRescue()">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>ABRIR WHATSAPP</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                    <div class="whatsapp-number">+56 9 3197 0961</div>
+                </div>
+
+                <div class="rescue-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-stopwatch"></i>
+                        </div>
+                        <h3>Tiempo de Respuesta</h3>
+                        <div class="response-time" id="responseTime">
+                            <span class="time-value">15-25</span>
+                            <span class="time-unit">minutos</span>
+                        </div>
+                        <p>Tiempo estimado de llegada a tu ubicación</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <h3>Cobertura</h3>
+                        <div class="coverage-radius">
+                            <span class="radius-value">50</span>
+                            <span class="radius-unit">km</span>
+                        </div>
+                        <p>Radio de cobertura desde el centro de Concepción</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Operadores</h3>
+                        <div class="operators-online">
+                            <span class="operators-count" id="operatorsOnline">12</span>
+                            <span class="operators-status">Disponibles</span>
+                        </div>
+                        <p>Operadores especializados disponibles ahora</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Testimonios</span>
+                <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
+                <p class="section-subtitle">Miles de motociclistas confían en nuestro servicio premium</p>
+            </div>
+
+            <div class="testimonials-carousel" id="testimonialsCarousel">
+                <div class="testimonial-card active">
+                    <div class="testimonial-header">
+                        <div class="client-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="client-info">
+                            <h4>Carlos Mendoza</h4>
+                            <span class="client-bike">Yamaha R6 2023</span>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <blockquote>
+                        "Increíble servicio! Me quedé sin gasolina en la Ruta 160 cerca de Talcahuano a las 11 PM y llegaron en 18 minutos exactos. El operador fue súper profesional y la app de cálculo de precio es genial. Definitivamente el mejor servicio de grúa para motos de Concepción."
+                    </blockquote>
+                    <div class="testimonial-date">Hace 2 días</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="client-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="client-info">
+                            <h4>María López</h4>
+                            <span class="client-bike">Honda CB650F</span>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <blockquote>
+                        "El servicio es excepcional! Tuve una pana en San Pedro de la Paz y la respuesta fue inmediata. El operador no solo transportó mi moto sino que también me explicó qué había pasado. Servicio premium real, vale cada peso."
+                    </blockquote>
+                    <div class="testimonial-date">Hace 1 semana</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="client-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="client-info">
+                            <h4>Diego Ramírez</h4>
+                            <span class="client-bike">Kawasaki Ninja 400</span>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <blockquote>
+                        "Tuve un problema eléctrico complicado en Chiguayante y el equipo lo solucionó rápidamente. El servicio fue excelente y el precio muy justo. Muy honestos y profesionales. Los recomiendo 100% para toda la región del Biobío."
+                    </blockquote>
+                    <div class="testimonial-date">Hace 3 días</div>
+                </div>
+            </div>
+
+            <div class="carousel-controls">
+                <button class="carousel-btn prev" onclick="previousTestimonial()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="currentTestimonial(0)"></span>
+                    <span class="dot" onclick="currentTestimonial(1)"></span>
+                    <span class="dot" onclick="currentTestimonial(2)"></span>
+                </div>
+                <button class="carousel-btn next" onclick="nextTestimonial()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="brand">
+                        <i class="fas fa-motorcycle"></i>
+                        <span>InitialDmotos</span>
+                    </div>
+                    <p>El servicio de grúa más avanzado y confiable para motocicletas. Tecnología de punta al servicio de los motociclistas más exigentes.</p>
+                    <div class="footer-stats">
+                        <span><strong>2000+</strong> Rescates</span>
+                        <span><strong>99%</strong> Satisfacción</span>
+                        <span><strong>24/7</strong> Disponible</span>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#servicios">Grúa Especializada</a></li>
+                        <li><a href="#servicios">Localización GPS</a></li>
+                        <li><a href="#servicios">Reparaciones Básicas</a></li>
+                        <li><a href="#rescate">Solicitar Rescate</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#inicio">Acerca de Nosotros</a></li>
+                        <li><a href="#testimonios">Testimonios</a></li>
+                        <li><a href="#">Términos de Servicio</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contacto de Emergencia - Concepción</h4>
+                    <div class="emergency-contact">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+56 9 3197 0961</span>
+                    </div>
+                    <div class="emergency-contact">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>+56 9 3197 0961</span>
+                    </div>
+                    <div class="emergency-contact">
+                        <i class="fas fa-envelope"></i>
+                        <span>concepcion@InitialDmotos.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 InitialDmotos Premium Concepción. Todos los derechos reservados.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <div class="floating-actions">
+        <button class="fab-main" id="fabMain" onclick="toggleFAB()">
+            <i class="fas fa-plus"></i>
+        </button>
+        <div class="fab-options" id="fabOptions">
+            <button class="fab-option" onclick="openEmergencyRescue()" title="Rescate de Emergencia">
+                <i class="fas fa-ambulance"></i>
+            </button>
+            <button class="fab-option" onclick="makeCall()" title="Llamar">
+                <i class="fas fa-phone"></i>
+            </button>
+            <button class="fab-option" onclick="openWhatsApp()" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </button>
+            <button class="fab-option" onclick="getCurrentLocation()" title="Mi Ubicación">
+                <i class="fas fa-map-marker-alt"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- WhatsApp Confirmation Modal -->
+    <div class="whatsapp-modal" id="whatsappModal">
+        <div class="whatsapp-modal-content">
+            <button class="whatsapp-modal-close" onclick="closeWhatsAppModal()">&times;</button>
+            <div class="whatsapp-modal-icon">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            <h3>🚨 RESCATE URGENTE 🚨</h3>
+            <div class="whatsapp-modal-message">
+                <p>Se enviará este mensaje:</p>
+                <div class="message-preview">
+                    "¡HOLA! NECESITO RESCATE URGENTE, ME HE QUEDADO EN PANA CON MI MOTO. ¿PUEDEN AYUDARME INMEDIATAMENTE?"
+                </div>
+            </div>
+            <div class="whatsapp-modal-actions">
+                <button class="btn btn-primary btn-whatsapp-confirm" onclick="confirmWhatsAppMessage()">
+                    <i class="fab fa-whatsapp"></i>
+                    ENVIAR MENSAJE
+                </button>
+                <button class="btn btn-secondary" onclick="closeWhatsAppModal()">
+                    Cancelar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rescue Modal -->
+    <div class="modal" id="rescueModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-ambulance"></i> Solicitud de Rescate</h3>
+                <button class="modal-close" onclick="closeRescueModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="rescue-status">
+                    <div class="status-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>¡Solicitud Enviada Exitosamente!</h4>
+                    <p>Tu solicitud de rescate ha sido procesada y enviada a nuestro centro de operaciones.</p>
+                </div>
+                
+                <div class="rescue-details">
+                    <div class="detail-item">
+                        <span class="label">Número de Solicitud:</span>
+                        <span class="value" id="requestNumber">MR-2025-001234</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Tiempo Estimado de Llegada:</span>
+                        <span class="value" id="estimatedArrival">15-20 minutos</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Costo Total:</span>
+                        <span class="value" id="finalCost">$85.00</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Operador Asignado:</span>
+                        <span class="value">Juan Pérez - Unidad #07</span>
+                    </div>
+                </div>
+
+                <div class="tracking-section">
+                    <h5>Seguimiento en Tiempo Real</h5>
+                    <div class="tracking-steps">
+                        <div class="step active">
+                            <i class="fas fa-check"></i>
+                            <span>Solicitud Recibida</span>
+                        </div>
+                        <div class="step active">
+                            <i class="fas fa-user-check"></i>
+                            <span>Operador Asignado</span>
+                        </div>
+                        <div class="step">
+                            <i class="fas fa-route"></i>
+                            <span>En Camino</span>
+                        </div>
+                        <div class="step">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>En Ubicación</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="trackRescue()">
+                    <i class="fas fa-route"></i>
+                    Rastrear Operador
+                </button>
+                <button class="btn btn-secondary" onclick="closeRescueModal()">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
