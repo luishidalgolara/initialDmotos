@@ -549,5 +549,44 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="script.js"></script>
+    
+    <!-- SCRIPT FORZADO PARA BOTÓN DE WHATSAPP -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        console.log("🔧 Script de corrección cargado");
+        
+        // Forzar evento en el botón del modal
+        const btnConfirm = document.querySelector(".btn-whatsapp-confirm");
+        if (btnConfirm) {
+            console.log("✅ Botón de confirmación encontrado");
+            btnConfirm.addEventListener("click", function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log("🔥 CLICK DETECTADO EN BOTÓN DE CONFIRMACIÓN");
+                
+                const TELEFONO = "56931970961";
+                const mensaje = "¡HOLA! NECESITO RESCATE URGENTE, ME HE QUEDADO EN PANA CON MI MOTO. ¿PUEDEN AYUDARME INMEDIATAMENTE?";
+                const url = "https://wa.me/" + TELEFONO + "?text=" + encodeURIComponent(mensaje);
+                
+                console.log("📱 Abriendo WhatsApp con URL:", url);
+                
+                const ventana = window.open(url, "_blank");
+                if (!ventana) {
+                    console.log("⚠️ Popup bloqueado, usando location.href");
+                    window.location.href = url;
+                }
+                
+                // Cerrar modal
+                const modal = document.getElementById("whatsappModal");
+                if (modal) {
+                    modal.classList.remove("active");
+                    document.body.style.overflow = "";
+                }
+            });
+        } else {
+            console.log("❌ ERROR: Botón de confirmación NO encontrado");
+        }
+    });
+    </script>
 </body>
 </html>
