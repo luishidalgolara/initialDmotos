@@ -2405,3 +2405,146 @@ d {
         font-size: 1.6rem;
     }
 }
+/* ============================================
+   FIX CRÍTICO - MODAL DE WHATSAPP
+   Agregado para solucionar problema de z-index
+   ============================================ */
+
+.whatsapp-modal {
+    display: none !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(0, 0, 0, 0.95) !important;
+    z-index: 999999 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+}
+
+.whatsapp-modal.active {
+    display: flex !important;
+}
+
+.whatsapp-modal-content {
+    position: relative !important;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%) !important;
+    padding: 40px !important;
+    border-radius: 20px !important;
+    max-width: 500px !important;
+    width: 90% !important;
+    text-align: center !important;
+    z-index: 1000000 !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(30, 215, 96, 0.2) !important;
+    border: 2px solid rgba(30, 215, 96, 0.3) !important;
+}
+
+.whatsapp-modal-close {
+    position: absolute !important;
+    top: 15px !important;
+    right: 15px !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #fff !important;
+    font-size: 24px !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    z-index: 1000001 !important;
+    transition: all 0.3s ease !important;
+}
+
+.whatsapp-modal-close:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    transform: rotate(90deg) !important;
+}
+
+.whatsapp-modal-icon {
+    font-size: 80px !important;
+    color: #25D366 !important;
+    margin-bottom: 20px !important;
+    animation: pulse 2s infinite !important;
+}
+
+.whatsapp-modal h3 {
+    color: #fff !important;
+    font-size: 28px !important;
+    margin-bottom: 20px !important;
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.5) !important;
+}
+
+.whatsapp-modal-message {
+    margin: 20px 0 !important;
+}
+
+.whatsapp-modal-message p {
+    color: #b0b0b0 !important;
+    margin-bottom: 10px !important;
+}
+
+.message-preview {
+    background: rgba(0, 0, 0, 0.5) !important;
+    padding: 15px !important;
+    border-radius: 10px !important;
+    color: #1ed760 !important;
+    font-style: italic !important;
+    border-left: 3px solid #25D366 !important;
+}
+
+.whatsapp-modal-actions {
+    margin-top: 30px !important;
+    display: flex !important;
+    gap: 15px !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+}
+
+.btn-whatsapp-confirm {
+    background: linear-gradient(45deg, #25D366 0%, #1ea952 100%) !important;
+    color: white !important;
+    border: none !important;
+    padding: 18px 35px !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    border-radius: 12px !important;
+    cursor: pointer !important;
+    margin: 0 !important;
+    z-index: 1000001 !important;
+    position: relative !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4) !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+.btn-whatsapp-confirm:hover {
+    background: linear-gradient(45deg, #1ea952 0%, #128c50 100%) !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6) !important;
+}
+
+.btn-whatsapp-confirm:active {
+    transform: translateY(-1px) !important;
+}
+
+.btn-whatsapp-confirm i {
+    font-size: 22px !important;
+}
+
+/* Animación para el ícono de WhatsApp */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* ============================================
+   FIN DEL FIX
+   ============================================ */
